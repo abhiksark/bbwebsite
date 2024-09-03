@@ -64,7 +64,7 @@ export default function Services() {
                         <span className="inline-block w-3 h-3 bg-primary-500 rounded-full ml-2" />
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Tailored solutions to fuel your startup's growth and innovation
+                        Tailored solutions to fuel your startup&apos;s growth and innovation
                     </p>
                 </motion.div>
 

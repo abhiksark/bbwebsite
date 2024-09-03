@@ -21,7 +21,7 @@ export default function Hero() {
               Empower Your <span className="text-blue-600">Startup</span> with Cutting-Edge Tech
             </h1>
             <p className="text-xl text-gray-700 mb-8">
-              We transform innovative ideas into powerful digital solutions, driving your startup's growth with engaging designs and scalable technology.
+              We transform innovative ideas into powerful digital solutions, driving your startup&apos;s growth with engaging designs and scalable technology.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="#services" className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 text-center">

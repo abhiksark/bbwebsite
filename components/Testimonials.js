@@ -48,9 +48,9 @@ export default function Testimonials() {
                             className="bg-white p-6 rounded-lg shadow-md"
                         >
                             <p className="text-gray-700 mb-4">
-                                <span className="text-blue-500 text-3xl font-serif">"</span>
+                                <span className="text-blue-500 text-3xl font-serif">&quot;</span>
                                 {testimonial.quote}
-                                <span className="text-blue-500 text-3xl font-serif">"</span>
+                                <span className="text-blue-500 text-3xl font-serif">&quot;</span>
                             </p>
                             <div className="text-center">
                                 <p className="font-semibold">{testimonial.name},</p>

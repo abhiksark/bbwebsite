@@ -40,7 +40,7 @@ export default function ContactUs() {
             <span className="inline-block w-3 h-3 bg-blue-500 rounded-full ml-2" />
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Have a question or want to work together? We'd love to hear from you!
+            Have a question or want to work together? We&aposd love to hear from you!
           </p>
         </motion.div>
 
