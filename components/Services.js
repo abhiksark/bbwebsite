@@ -1,3 +1,5 @@
+// components/Services.js
+
 'use client';
 
 import { useState } from 'react';
@@ -58,15 +60,15 @@ export default function Services() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                        Our Comprehensive <span className="text-primary">Services</span>
+                        Our Comprehensive <span className="text-primary-500">Services</span>
+                        <span className="inline-block w-3 h-3 bg-primary-500 rounded-full ml-2" />
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Tailored solutions to fuel your startup's growth and innovation
                     </p>
                 </motion.div>
 
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 justify-center items-center w-full max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 justify-center items-center w-full max-w-6xl mx-auto">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}

@@ -1,3 +1,5 @@
+// components/BlogPost.js
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -26,7 +28,7 @@ export default function BlogPost({ post, index }) {
       <div className="p-6 flex-grow">
         <p className="text-gray-600 mb-4">{post.excerpt}</p>
         <Link href={`/blog/${post.slug}`} 
-              className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-accent transition duration-300">
+              className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition duration-300">
           Read More
         </Link>
       </div>

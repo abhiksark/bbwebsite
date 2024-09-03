@@ -1,3 +1,5 @@
+// components/BlogPostContent.js
+
 'use client';
 
 import { MDXRemote } from 'next-mdx-remote';

@@ -1,3 +1,5 @@
+// components/ServiceCard.js
+
 import Image from 'next/image';
 
 export default function ServiceCard({ title, description, image }) {

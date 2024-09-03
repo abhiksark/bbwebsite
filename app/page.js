@@ -1,19 +1,21 @@
+// app/page.js
+
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
+import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import Footer from '../components/Footer';
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="pt-16"> {/* Add padding-top to account for fixed header */}
+      <main className="pt-16">
         <Hero />
         <Services />
+        <Testimonials />
         <About />
       </main>
-      <Footer />
     </>
   );
 }

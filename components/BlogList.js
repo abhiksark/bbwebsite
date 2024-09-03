@@ -1,3 +1,5 @@
+// components/BlogList.js
+
 import BlogPost from './BlogPost';
 
 export default function BlogList({ posts }) {
