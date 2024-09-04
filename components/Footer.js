@@ -43,6 +43,11 @@ export default function Footer() {
       text: "GitHub",
       icon: "/icons/github.svg",
     },
+    {
+      href: "/",
+      text: "Instagram",
+      icon: "/icons/instagram.svg",
+    },
   ];
 
   return (
