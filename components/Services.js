@@ -80,7 +80,7 @@ export default function Services() {
           </h2>
           <div className="w-24 h-1 bg-accent-500 mx-auto mb-8"></div>
           <p className="text-xl text-primary-700 max-w-3xl mx-auto">
-            Tailored solutions to fuel your startup's growth and innovation
+            Tailored solutions to fuel your startups growth and innovation
           </p>
         </motion.div>
 
