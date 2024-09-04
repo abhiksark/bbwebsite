@@ -1,10 +1,10 @@
 // components/BlogPostContent.js
 
-'use client';
+"use client";
 
-import { MDXRemote } from 'next-mdx-remote';
-import { useState, useEffect } from 'react';
-import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote } from "next-mdx-remote";
+import { useState, useEffect } from "react";
+import { serialize } from "next-mdx-remote/serialize";
 
 export default function BlogPostContent({ content }) {
   const [mdxSource, setMdxSource] = useState(null);
@@ -18,7 +18,7 @@ export default function BlogPostContent({ content }) {
   }, [content]);
 
   if (!mdxSource) {
-    return <div>Loading...</div>;
+    return <div className="text-center text-primary-600">Loading...</div>;
   }
 
   return <MDXRemote {...mdxSource} />;

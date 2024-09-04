@@ -26,7 +26,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 to-white py-24">
+    <section className="relative min-h-screen bg-gradient-to-br from-primary-50 to-white py-24">
       <BackgroundElements />
       <div className="container relative z-10 mx-auto px-4">
         <motion.div
@@ -35,12 +35,12 @@ export default function ContactUs() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Get in <span className="text-blue-600">Touch</span>
-            <span className="inline-block w-3 h-3 bg-blue-500 rounded-full ml-2" />
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4">
+            Get in <span className="text-accent-500">Touch</span>
+            <span className="inline-block w-3 h-3 bg-accent-500 rounded-full ml-2" />
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Have a question or want to work together? We&aposd love to hear from you!
+          <p className="text-xl text-text-700 max-w-3xl mx-auto">
+            Have a question or want to work together? We&apos;d love to hear from you!
           </p>
         </motion.div>
 
@@ -50,9 +50,9 @@ export default function ContactUs() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Information</h2>
-            <p className="text-gray-600 mb-4">Feel free to reach out to us using the following contact details:</p>
-            <ul className="space-y-2 text-gray-600">
+            <h2 className="text-2xl font-semibold text-primary-800 mb-4">Contact Information</h2>
+            <p className="text-text-600 mb-4">Feel free to reach out to us using the following contact details:</p>
+            <ul className="space-y-2 text-text-600">
               <li>
                 <span className="font-semibold">Email:</span> contact@bitwisebuilder.com
               </li>
@@ -72,7 +72,7 @@ export default function ContactUs() {
           >
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
+                <label htmlFor="name" className="block text-text-700 font-medium mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -80,11 +80,11 @@ export default function ContactUs() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-text-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
+                <label htmlFor="email" className="block text-text-700 font-medium mb-2">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -92,11 +92,11 @@ export default function ContactUs() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-text-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
+                <label htmlFor="message" className="block text-text-700 font-medium mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -104,12 +104,12 @@ export default function ContactUs() {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-text-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300"
+                className="bg-primary-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-700 transition duration-300"
               >
                 Send Message
               </button>

@@ -1,6 +1,6 @@
 // components/About.js
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ServiceCard({ title, description, image }) {
   return (

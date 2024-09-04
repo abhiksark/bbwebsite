@@ -15,7 +15,7 @@ export default function BlogPost({ post, index }) {
           objectFit="cover" 
           className="transition-transform duration-300 hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4">
           <p className="text-white text-sm mb-2">{post.date}</p>
           <h2 className="text-xl font-semibold text-white">
@@ -26,9 +26,9 @@ export default function BlogPost({ post, index }) {
         </div>
       </div>
       <div className="p-6 flex-grow">
-        <p className="text-gray-600 mb-4">{post.excerpt}</p>
+        <p className="text-text-600 mb-4">{post.excerpt}</p>
         <Link href={`/blog/${post.slug}`} 
-              className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition duration-300">
+              className="inline-block bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary-700 transition duration-300">
           Read More
         </Link>
       </div>
