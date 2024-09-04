@@ -5,6 +5,7 @@
 import { useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Services() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -16,6 +17,7 @@ export default function Services() {
         "Create intuitive and powerful mobile experiences that engage and delight your users.",
       image: "/illustrations_Mobile_apps.svg",
       color: "from-primary-400 to-primary-600",
+      link: "/services/app-design-development",
     },
     {
       title: "CRM & ERP Solutions",
@@ -23,6 +25,7 @@ export default function Services() {
         "Streamline your operations with tailored systems that drive efficiency and foster growth.",
       image: "/illustrations_Data_trends.svg",
       color: "from-accent-400 to-accent-600",
+      link: "/services/crm-erp-solutions",
     },
     {
       title: "Cloud Cost Optimization",
@@ -30,6 +33,7 @@ export default function Services() {
         "Maximize your cloud efficiency to reduce costs and boost overall performance.",
       image: "/illustrations_Cloud_hosting.svg",
       color: "from-primary-400 to-primary-600",
+      link: "/services/cloud-cost-optimization",
     },
     {
       title: "AI & Machine Learning",
@@ -37,6 +41,7 @@ export default function Services() {
         "Harness the power of data to create intelligent, predictive systems for your business.",
       image: "/illustrations_Artificial_intelligence.svg",
       color: "from-accent-400 to-accent-600",
+      link: "/services/ai-machine-learning",
     },
     {
       title: "Web Design & Development",
@@ -44,6 +49,7 @@ export default function Services() {
         "Build responsive, high-performance websites that convert visitors into loyal customers.",
       image: "/illustrations_Web_developer.svg",
       color: "from-primary-400 to-primary-600",
+      link: "/services/web-design-development",
     },
     {
       title: "Migration & Integration",
@@ -51,6 +57,7 @@ export default function Services() {
         "Seamlessly transition to new systems with expert guidance and support.",
       image: "/illustrations_Migration.svg",
       color: "from-accent-400 to-accent-600",
+      link: "/services/migration-integration",
     },
   ];
 
@@ -73,7 +80,7 @@ export default function Services() {
           </h2>
           <div className="w-24 h-1 bg-accent-500 mx-auto mb-8"></div>
           <p className="text-xl text-primary-700 max-w-3xl mx-auto">
-            Tailored solutions to fuel your startup&apos;s growth and innovation
+            Tailored solutions to fuel your startup's growth and innovation
           </p>
         </motion.div>
 
@@ -95,7 +102,9 @@ export default function Services() {
               onMouseLeave={() => setHoveredIndex(null)}
               className="flex justify-center"
             >
-              <ServiceCard {...service} isHovered={hoveredIndex === index} />
+              <Link href={service.link} className="w-full">
+                <ServiceCard {...service} isHovered={hoveredIndex === index} />
+              </Link>
             </motion.div>
           ))}
         </motion.div>
