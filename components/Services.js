@@ -70,20 +70,26 @@ export default function Services() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4">
             Our Comprehensive <span className="text-accent-500">Services</span>
-            <span className="inline-block w-3 h-3 bg-accent-500 rounded-full ml-2" />
           </h2>
-          <p className="text-xl text-text-600 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-accent-500 mx-auto mb-8"></div>
+          <p className="text-xl text-primary-700 max-w-3xl mx-auto">
             Tailored solutions to fuel your startup&apos;s growth and innovation
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 justify-center items-center w-full max-w-6xl mx-auto">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-stretch w-full max-w-6xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, staggerChildren: 0.1 }}
+          viewport={{ once: true }}
+        >
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -92,7 +98,7 @@ export default function Services() {
               <ServiceCard {...service} isHovered={hoveredIndex === index} />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
     </section>

@@ -5,7 +5,6 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
 import Link from "next/link";
 import BackgroundElements from "../../../components/BackgroundElements";
-import Header from "../../../components/Header";
 
 const components = {
   h1: (props) => (
@@ -46,45 +45,42 @@ export default async function BlogPost({ params }) {
   ]);
 
   return (
-    <>
-      <Header />
-      <section className="relative min-h-screen bg-gradient-to-br from-primary-50 to-white pt-24 pb-24">
-        <BackgroundElements />
-        <div className="container relative z-10 mx-auto px-4">
-          <article className="bg-white rounded-lg shadow-xl overflow-hidden max-w-4xl mx-auto">
-            {post.coverImage && (
-              <div className="relative h-64 md:h-96 w-full">
-                <Image
-                  src={post.coverImage}
-                  alt={post.title}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-            )}
-            <div className="p-8 md:p-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4">
-                {post.title}
-                <span className="inline-block w-3 h-3 bg-accent-500 rounded-full ml-2" />
-              </h1>
-              <p className="text-lg text-text-600 mb-8">{post.date}</p>
-              <div className="prose lg:prose-xl max-w-none">
-                <MDXRemote source={post.content} components={components} />
-              </div>
+    <section className="relative min-h-screen bg-gradient-to-br from-primary-50 to-white py-24">
+      <BackgroundElements />
+      <div className="container relative z-10 mx-auto px-4">
+        <article className="bg-white rounded-lg shadow-xl overflow-hidden max-w-4xl mx-auto">
+          {post.coverImage && (
+            <div className="relative h-64 md:h-96 w-full">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                layout="fill"
+                objectFit="cover"
+              />
             </div>
-          </article>
-          <div className="mt-16 text-center">
-            <Link
-              href="/blog"
-              className="bg-primary-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-700 transition duration-300"
-            >
-              Back to Blog
-            </Link>
+          )}
+          <div className="p-8 md:p-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4">
+              {post.title}
+              <span className="inline-block w-3 h-3 bg-accent-500 rounded-full ml-2" />
+            </h1>
+            <p className="text-lg text-text-600 mb-8">{post.date}</p>
+            <div className="prose lg:prose-xl max-w-none">
+              <MDXRemote source={post.content} components={components} />
+            </div>
           </div>
+        </article>
+        <div className="mt-16 text-center">
+          <Link
+            href="/blog"
+            className="bg-primary-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-700 transition duration-300"
+          >
+            Back to Blog
+          </Link>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
-      </section>
-    </>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
   );
 }
 
